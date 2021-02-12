@@ -1,6 +1,6 @@
 //
 //  Date+.swift
-//  Lil Scores
+//  MNUtilities
 //
 //  Created by Mohamed Aberkane on 05/02/2021.
 //
@@ -24,6 +24,12 @@ public extension Date {
     var day: String {
         let dateFormatter = DateFormatter()
         dateFormatter.dateFormat = "d"
+        return dateFormatter.string(from: self)
+    }
+    
+    var mediumDate: String {
+        let dateFormatter = DateFormatter()
+        dateFormatter.dateFormat = "YYYY-MM-dd"
         return dateFormatter.string(from: self)
     }
     

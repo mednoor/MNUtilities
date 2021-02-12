@@ -1,6 +1,6 @@
 //
 //  String+.swift
-//  Lil Scores
+//  MNUtilities
 //
 //  Created by Mohamed Aberkane on 08/02/2021.
 //
