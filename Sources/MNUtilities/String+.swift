@@ -1,19 +1,31 @@
 //
-//  String+.swift
-//  MNUtilities
+//  File.swift
+//  
 //
-//  Created by Mohamed Aberkane on 08/02/2021.
+//  Created by Mohamed Aberkane on 12/02/2021.
 //
 
 import Foundation
 
-public extension Optional {
+public extension String {
     
-    var isNil: Bool {
-        self == nil
+    func toDate(withFormat format: String = "yyyy-MM-dd'T'HH:mm:ssZ") -> Date? {
+        
+        let formatter = DateFormatter()
+        formatter.locale = Locale(identifier: "en_GB")
+        formatter.dateFormat = format
+        return formatter.date(from: self)
     }
     
-    var isNotNil: Bool {
-        self != nil
+    var nilIfEmpty: String? {
+        self.isEmpty ? nil : self
+    }
+    
+    var toInt: Int? {
+        Int(self)
+    }
+    
+    var boolValue: Bool {
+        (self as NSString).boolValue
     }
 }

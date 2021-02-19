@@ -33,6 +33,12 @@ public extension Date {
         return dateFormatter.string(from: self)
     }
     
+    var hourMinute: String {
+        let dateFormatter = DateFormatter()
+        dateFormatter.dateFormat = "HH:mm"
+        return dateFormatter.string(from: self)
+    }
+    
     var startOfDay: Date {
         Calendar.current.startOfDay(for: self)
     }
