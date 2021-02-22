@@ -17,6 +17,10 @@ public extension String {
         return formatter.date(from: self)
     }
     
+    var isNotEmpty: Bool {
+        !self.isEmpty
+    }
+    
     var nilIfEmpty: String? {
         self.isEmpty ? nil : self
     }
