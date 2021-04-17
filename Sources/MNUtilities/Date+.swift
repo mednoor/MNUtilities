@@ -92,12 +92,6 @@ public extension Date {
         Calendar.current.date(byAdding: component, value: value, to: self)!
     }
     
-    var twoYearsDates: [Date] {
-        let aYearAgo = self.startOfMonth.subtract(value: 1, component: .year)
-        let aYearLater = self.endOfMonth.adding(value: 1, component: .year)
-        return Date.dates(from: aYearAgo, to: aYearLater)
-    }
-    
     static func dates(from startDate: Date, to toDate: Date) -> [Date] {
         var dates: [Date] = []
         var date = startDate
